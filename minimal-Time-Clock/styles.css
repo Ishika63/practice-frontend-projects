@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: black;
+}
+
+p{
+    font-size: 10vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #F1EBBB;
+}
+
+#hours{
+  color:#B5076B;  
+}
+
+#minutes{
+    color: #5C2A9D;
+}
+
+#seconds{
+    color: #00A8CC;
+}
+
+#mode{
+    color: #FA7D09;
+}
+
+.containter{
+    width: 80%;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: #DDD solid 5px;
+    border-radius: 25px;
+}
