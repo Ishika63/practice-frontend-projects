@@ -1,0 +1,76 @@
+:root{
+  --font-color: black;
+  --bg-color: #fff;
+}
+
+body[data-theme="dark-theme"] {
+  --font-color: #fff;
+  --bg-color: black;
+}
+
+body[data-theme="light-theme"] {
+  --font-color: black;
+  --bg-color: #fff;
+}
+
+.App {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+.change-theme{
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  width: 50vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+header{
+  width: 50vw;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+button{
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  border: var(--font-color) 3px solid;
+  font-size: 1.5rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.3em;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover{
+  scale: 1.03;
+  opacity: 0.99;
+  transition: 100ms;
+}
+
+button:active{
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 650px){
+  header{
+    width: 80vw;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  button{
+    width: 30vw;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+  }
+}
