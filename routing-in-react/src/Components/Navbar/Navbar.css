@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f5f5ff;
+}
+
+.navbar{
+    padding-top: 3vh;
+    text-align: center;
+    width: 100wv;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    margin-left: 2em;
+    margin-right: 2em;
+    color: black;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    outline: none;
+}
+
+/* .navbar a:hover{
+    color: rgb(255, 204, 0);
+    transition: 300ms;
+    text-decoration: underline;
+} */
+
+.navbar a:hover{
+    color: rgb(255, 115, 0);
+    transition: 300ms;
+    text-decoration: underline;
+}
+
+.navbar-select a{
+    color: red;
+    text-decoration: underline;
+    transition: 100ms;
+    outline: none;
+}
