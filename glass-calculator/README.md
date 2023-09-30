@@ -1,1 +1,1 @@
-![1](https://github.com/Ishika63/practice-frontend-projects/assets/80192358/07e8562a-ee88-4000-b58d-14e5c1a8ae1c)
+![2](https://github.com/Ishika63/practice-frontend-projects/assets/80192358/245a6709-ef15-4db3-8c02-0a88d18f13f3)
