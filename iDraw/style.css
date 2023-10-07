@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    padding: 30px;
+    background: #313131;
+    overflow: hidden;
+    font-family: "Mukta";
+}
+canvas{
+    box-shadow: -3px 2px 9px 6px black;
+    cursor: pointer;
+    /* color: white; */
+}
+.tools{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.color-field{
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border:2px solid white;
+    align-items: center;
+    margin: 0 10px;
+}
+.button{
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    background: #222;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.color-picker{
+    align-self: center;
+    margin: 0 50px;
+    height: 50px;
+}
+
+.pen-range{
+    align-self: center;
+    margin: 0 15px;
+}
+
