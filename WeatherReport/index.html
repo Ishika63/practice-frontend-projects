@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather App</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box1 {
+            margin: 100px;
+            text-align: center;
+            align-items: center;
+            padding: 100px;
+            border: 2px solid orangered;
+            background-color: black;
+            color: white;
+        }
+        .info{
+            display: flex;
+            flex-direction: column; 
+        }
+        .box{
+            text-align: center;
+            margin: 10px;
+        }
+        .heading{
+            margin: 5px;
+            color: yellow;
+        }
+        #head{
+            color:orangered;
+        }
+        #submit{
+            padding: 7px;
+            border-radius: 10px;
+        }
+        #textarea{
+            padding: 7px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        @media  screen and (max-width:550px) {
+            .box1 {
+            margin: 0px;
+            text-align: center;
+            align-items: center;
+            padding: 100px;
+            border: 2px solid orangered;
+            background-color: black;
+            color: white;
+        }
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <div class="box1">
+    
+        
+        <div class="info">
+            <div class="text">
+                <h3 id="texthead">Enter the city Name</h3>
+                <input id="textarea"type="text">
+                <button id="submit">submit</button>
+            </div>
+            <div class="box"><h2 id="head">Weather Report</h2></div>
+            <div class="box">
+                <class class="heading">Location:</class>
+                <h2 id="loc"><i class="fas fa-street-view"></i></h2>
+            </div>
+            <div class="box">
+                <class class="heading">Time & Date:</class>
+                <p id="date"></p>
+            </div>
+            <div class="box">
+                <class class="heading">Weather:</class>
+                <h2 id="weatherinfo"></h2>
+            </div>
+            <div class="box">
+                <class class="heading">Weather Description:</class>
+                <h2 id="weatherdes"></h2>
+            </div>
+            <div class="box">
+                <class class="heading">Temperature:</class>
+                <p id="temp"></p>
+            </div>
+      
+        </div>
+    </div>
+    <script>
+        console.log("a start")
+        const date = document.getElementById('date');
+        const loc = document.getElementById('loc');
+        const temp = document.getElementById('temp');
+        const weatherdes = document.getElementById('weatherdes');
+        const weatherinfo= document.getElementById('weatherinfo');
+        const tempMinMax = document.getElementById('tempMinMax');
+        const textarea = document.getElementById('textarea');
+        const submit = document.getElementById('submit');
+        let citysearch;
+        let flag=1;
+        submit.addEventListener('click',()=>{
+           citysearch=textarea.value;
+           console.log(citysearch);
+           let today = new Date();
+        console.log(today);
+        date.innerText=`${today}`;
+
+        function getData(){
+            url=`https://api.openweathermap.org/data/2.5/weather?q=${citysearch}&appid=e126389359d6fc71961f2bb29a37b7ef`;
+            // url="test.txt";
+            fetch(url)
+            .then((response)=>{
+                return response.json();
+            })
+            .then((data)=>{
+                console.log(data.weather[0].main);
+                console.log(data.name);
+                console.log(data.weather[0].description);
+                weather_=data.weather[0].main;
+                weather_des=data.weather[0].description;
+                temp_=((data.main.temp)-273).toFixed(2);
+                loca=data.name;
+                loc.innerText=loca;
+                weatherinfo.innerText=weather_;
+                weatherdes.innerText=weather_des;
+                temp.innerText=`${temp_}C`;
+            })
+        }
+        
+        getData();
+        })
+        // console.log(citysearch);
+        
+    </script>
+</body>
+
+</html>
